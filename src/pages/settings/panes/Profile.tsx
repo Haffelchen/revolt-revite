@@ -114,7 +114,7 @@ export const Profile = observer(() => {
                         style="icon"
                         fileType="avatars"
                         behaviour="upload"
-                        maxFileSize={4_000_000}
+                        maxFileSize={5_000_000}
                         onUpload={(avatar) => client.users.edit({ avatar })}
                         remove={() => client.users.edit({ remove: ["Avatar"] })}
                         defaultPreview={client.user!.generateAvatarURL(
@@ -136,7 +136,7 @@ export const Profile = observer(() => {
                         style="banner"
                         behaviour="upload"
                         fileType="backgrounds"
-                        maxFileSize={6_000_000}
+                        maxFileSize={50_000_000}
                         onUpload={async (background) => {
                             await client.users.edit({
                                 profile: { background },
